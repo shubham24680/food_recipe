@@ -86,8 +86,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Text(
                         "Forgot Password",
                         style: GoogleFonts.lexend(
-                            fontWeight: FontWeight.bold,
-                            color: kTextLigntColor),
+                            fontWeight: FontWeight.bold, color: buttonColor),
                       ),
                     ),
                   ),
@@ -107,7 +106,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       width: double.maxFinite,
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        color: kPrimaryColor,
+                        color: buttonColor,
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Padding(
@@ -143,8 +142,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Text(
                         "Register now",
                         style: GoogleFonts.lexend(
-                            fontWeight: FontWeight.bold,
-                            color: kTextLigntColor),
+                            fontWeight: FontWeight.bold, color: buttonColor),
                       ),
                     ),
                   ],

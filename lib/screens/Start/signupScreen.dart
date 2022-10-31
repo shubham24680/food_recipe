@@ -116,7 +116,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     width: double.maxFinite,
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: kPrimaryColor,
+                      color: buttonColor,
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Padding(
@@ -152,7 +152,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     child: Text(
                       "Login now",
                       style: GoogleFonts.lexend(
-                          fontWeight: FontWeight.bold, color: kTextLigntColor),
+                          fontWeight: FontWeight.bold, color: buttonColor),
                     ),
                   )
                 ],

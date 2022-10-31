@@ -13,6 +13,7 @@ class DemoScreen extends StatelessWidget {
       backgroundColor: Colors.lightGreen[100],
       body: SafeArea(
         child: Center(
+            child: SingleChildScrollView(
           child: Column(
             children: [
               Container(
@@ -50,9 +51,10 @@ class DemoScreen extends StatelessWidget {
               buttons(context, 1, Colors.white, "Registor", Colors.black),
               const SizedBox(height: 10),
               buttons(context, 2, kPrimaryColor, "Sign In", Colors.white),
+              const SizedBox(height: 10),
             ],
           ),
-        ),
+        )),
       ),
     );
   }

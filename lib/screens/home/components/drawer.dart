@@ -15,7 +15,7 @@ class DrawerScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       child: Column(
         children: [
-          Image.asset("assets/images/chido.jpg"),
+          Image.asset("assets/images/chef.png"),
           InkWell(
             onTap: () {
               Navigator.push(context,

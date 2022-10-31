@@ -46,7 +46,8 @@ dependencies:
   flutter_native_splash: ^2.2.12
 
 flutter_native_splash:
-  background_image: "assets/images/splash.png"
+  color: "#ffffff"
+  image: "assets/images/food.png"
 
 flutter_icons:
   android: "food_fresh"

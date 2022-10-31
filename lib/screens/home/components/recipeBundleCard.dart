@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_recipe/models/recipeBundle.dart';
 import 'package:food_recipe/models/size_config.dart';
+import 'package:food_recipe/screens/sheets/components/detailedrecipe.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class RecipeBundleCard extends StatelessWidget {
   final RecipeBundle recipeBundle;
@@ -12,7 +14,10 @@ class RecipeBundleCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: press(),
+      onTap: () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => recipeBundle.destination));
+      },
       child: Container(
         decoration: BoxDecoration(
           color: recipeBundle.color,
@@ -29,8 +34,8 @@ class RecipeBundleCard extends StatelessWidget {
                     const Spacer(),
                     Text(
                       recipeBundle.title,
-                      style: TextStyle(
-                        fontSize: SizeConfig.defaultSize * 2.2,
+                      style: GoogleFonts.staatliches(
+                        fontSize: SizeConfig.defaultSize * 2.5,
                         color: Colors.white,
                       ),
                       maxLines: 2,
@@ -39,8 +44,8 @@ class RecipeBundleCard extends StatelessWidget {
                     SizedBox(height: SizeConfig.defaultSize * 0.5),
                     Text(
                       recipeBundle.description,
-                      style: const TextStyle(
-                        color: Colors.white54,
+                      style: GoogleFonts.comicNeue(
+                        color: Colors.white60,
                       ),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
@@ -80,7 +85,7 @@ buildInfo(defaultSize, icon, info) {
       ),
       Text(
         info,
-        style: const TextStyle(color: Colors.white),
+        style: GoogleFonts.darkerGrotesque(color: Colors.white, fontSize: 16),
       )
     ],
   );

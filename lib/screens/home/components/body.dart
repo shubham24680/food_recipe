@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_recipe/models/recipeBundle.dart';
 import 'package:food_recipe/models/size_config.dart';
+import 'package:food_recipe/screens/sheets/components/detailedrecipe.dart';
 import 'categories.dart';
 import 'package:food_recipe/screens/home/components/recipeBundleCard.dart';
 
@@ -12,25 +13,31 @@ class Body extends StatelessWidget {
     return SafeArea(
       child: Column(
         children: <Widget>[
-          const Categories(),
+          // const Categories(),
           Expanded(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: SizeConfig.defaultSize),
               child: GridView.builder(
                 itemCount: recipeBundles.length,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount:
-                      SizeConfig.orientation == Orientation.landscape ? 2 : 1,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 1,
+                  // SizeConfig.orientation == Orientation.landscape ? 2 : 1,
                   mainAxisSpacing: 20,
-                  crossAxisSpacing:
-                      SizeConfig.orientation == Orientation.landscape
-                          ? SizeConfig.defaultSize * 2
-                          : 0,
+                  // crossAxisSpacing:
+                  // SizeConfig.orientation == Orientation.landscape
+                  //     ? SizeConfig.defaultSize * 2
+                  //     : 0,
                   childAspectRatio: 1.65,
                 ),
                 itemBuilder: (context, index) => RecipeBundleCard(
                   recipeBundle: recipeBundles[index],
-                  press: () {},
+                  press: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                recipeBundles[index].destination));
+                  },
                 ),
               ),
             ),
