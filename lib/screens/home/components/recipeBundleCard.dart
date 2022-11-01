@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_recipe/models/recipeBundle.dart';
 import 'package:food_recipe/models/size_config.dart';
+import 'package:food_recipe/screens/sheets/components/detailRecipe.dart';
+import 'package:food_recipe/screens/sheets/components/detailRecipeItems.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class RecipeBundleCard extends StatelessWidget {
@@ -14,12 +16,14 @@ class RecipeBundleCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (context) => recipeBundle.destination,
-        //   ),
-        // );
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => RecipeScreen(
+              detailRecipeItems: detailRecipeItems[0],
+            ),
+          ),
+        );
       },
       child: Container(
         decoration: BoxDecoration(
