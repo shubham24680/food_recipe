@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_recipe/models/recipeBundle.dart';
 import 'package:food_recipe/models/size_config.dart';
-import 'package:food_recipe/screens/sheets/components/detailedrecipe.dart';
-import 'categories.dart';
 import 'package:food_recipe/screens/home/components/recipeBundleCard.dart';
 
 class Body extends StatelessWidget {
@@ -32,11 +30,12 @@ class Body extends StatelessWidget {
                 itemBuilder: (context, index) => RecipeBundleCard(
                   recipeBundle: recipeBundles[index],
                   press: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                recipeBundles[index].destination));
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //       builder: (context) =>
+                    //           recipeBundles[index].destination,
+                    //     ));
                   },
                 ),
               ),
