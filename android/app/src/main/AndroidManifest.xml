@@ -4,7 +4,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <application
-        android:label="Recipe"
+        android:label="Fresh Food"
         android:name="${applicationName}"
         android:icon="@mipmap/food_fresh">
         <activity

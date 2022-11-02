@@ -44,6 +44,7 @@ dependencies:
   firebase_core: ^2.1.1
   firebase_core_platform_interface: ^4.5.2
   flutter_native_splash: ^2.2.12
+  expansion_tile_card: ^2.0.0
 
 flutter_native_splash:
   color: "#ffffff"

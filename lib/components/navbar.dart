@@ -30,6 +30,7 @@ class MyBottomNavbar extends StatelessWidget {
                           isActive:
                               navItems.selectedIndex == index ? true : false,
                           icon: navItems.items[index].icon,
+                          color: navItems.items[index].color,
                           press: () {
                             navItems.chnageNavIndex(index: index);
                             if (navItems.items[index].destinationChecker())
@@ -48,12 +49,12 @@ class MyBottomNavbar extends StatelessWidget {
     );
   }
 
-  buildNavbarItems({icon, press, isActive = false}) {
+  buildNavbarItems({icon, color, press, isActive = false}) {
     return IconButton(
       onPressed: press,
       icon: SvgPicture.asset(
         icon,
-        color: isActive ? kPrimaryColor : const Color(0xFFD1D4D4),
+        color: isActive ? color : const Color(0xFFD1D4D4),
         height: 22,
       ),
     );
