@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_recipe/models/size_config.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'home/home_screen.dart';
@@ -13,7 +14,7 @@ class Plans extends StatelessWidget {
       backgroundColor: Colors.red[50],
       appBar: buildAppBar(),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
             padding: EdgeInsets.all(SizeConfig.defaultSize),
@@ -60,7 +61,8 @@ class Cards extends StatelessWidget {
             vertical: SizeConfig.defaultSize * 1.5,
           ),
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: Colors.white70,
+            border: Border.all(color: Colors.white, width: 2),
             borderRadius: BorderRadius.circular(SizeConfig.defaultSize),
           ),
           child: Column(
@@ -89,19 +91,7 @@ class Cards extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 15),
-              Center(
-                child: ElevatedButton(
-                  onPressed: () {},
-                  // style: ButtonStyle(backgroundColor: MaterialStateProperty),
-                  child: Text(
-                    "Purchase Now",
-                    style: GoogleFonts.varelaRound(
-                        color: const Color(0xFFD82D40),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
-                  ),
-                ),
-              ),
+              const Center(child: Hover()),
               const SizedBox(height: 30),
               id == 1
                   ? Column(
@@ -128,15 +118,62 @@ class Cards extends StatelessWidget {
   }
 }
 
+class Hover extends StatefulWidget {
+  const Hover({super.key});
+
+  @override
+  State<Hover> createState() => _HoverState();
+}
+
+class _HoverState extends State<Hover> {
+  var ishover = false;
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onHover: ((event) {
+        setState(() {
+          ishover = true;
+        });
+      }),
+      onExit: ((event) {
+        setState(() {
+          ishover = false;
+        });
+      }),
+      child: ElevatedButton(
+          onPressed: () {},
+          style: ElevatedButton.styleFrom(
+              backgroundColor:
+                  ishover ? const Color(0xFFD82D40) : Colors.transparent,
+              elevation: 0,
+              side: const BorderSide(color: Color(0xFFD82D40)),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(SizeConfig.defaultSize * 2),
+              )),
+          child: Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: SizeConfig.defaultSize * 5,
+                vertical: SizeConfig.defaultSize),
+            child: Text(
+              "Purchase Now",
+              style: GoogleFonts.varelaRound(
+                  color: ishover ? Colors.white : const Color(0xFFD82D40),
+                  fontSize: 20),
+            ),
+          )),
+    );
+  }
+}
+
 selected(check, offer) {
   return Row(
     children: [
-      Icon(
-        Icons.turn_right,
+      SvgPicture.asset(
+        "assets/icons/tick.svg",
         color: check == true
             ? const Color(0xFFD82D40)
             : const Color(0xFFD82D40).withOpacity(0.5),
-        size: 16,
+        height: 16,
       ),
       const SizedBox(width: 20),
       Text(
