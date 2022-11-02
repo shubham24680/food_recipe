@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_recipe/models/constants.dart';
 import 'package:food_recipe/models/size_config.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ProfileMenuItem extends StatelessWidget {
   const ProfileMenuItem(
@@ -26,13 +27,16 @@ class ProfileMenuItem extends StatelessWidget {
             SizedBox(width: SizeConfig.defaultSize * 2),
             Text(
               name,
-              style: TextStyle(
+              style: GoogleFonts.varelaRound(
                   fontSize: SizeConfig.defaultSize * 1.6,
-                  color: kTextLigntColor),
+                  color: const Color(0xFF0081a7)),
             ),
             const Spacer(),
-            Icon(Icons.arrow_forward_ios,
-                size: SizeConfig.defaultSize * 1.6, color: kTextLigntColor),
+            Icon(
+              Icons.arrow_forward_ios,
+              size: SizeConfig.defaultSize * 1.6,
+              color: const Color(0xFF0081a7),
+            ),
           ]),
         ),
       ),

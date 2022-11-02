@@ -48,7 +48,7 @@ class DemoScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 50),
-              buttons(context, 1, Colors.white, "Registor", Colors.black),
+              buttons(context, 1, Colors.white, "Register", Colors.black),
               const SizedBox(height: 10),
               buttons(context, 2, kPrimaryColor, "Sign In", Colors.white),
               const SizedBox(height: 10),

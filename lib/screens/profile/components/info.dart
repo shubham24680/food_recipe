@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_recipe/models/constants.dart';
 import 'package:food_recipe/models/size_config.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Info extends StatelessWidget {
   const Info(
@@ -20,7 +21,7 @@ class Info extends StatelessWidget {
             clipper: CustomShape(),
             child: Container(
               height: SizeConfig.defaultSize * 15,
-              color: kPrimaryColor,
+              color: const Color(0xFF0081a7),
             ),
           ),
           Center(
@@ -45,7 +46,7 @@ class Info extends StatelessWidget {
               SizedBox(height: SizeConfig.defaultSize / 2),
               Text(
                 name,
-                style: TextStyle(
+                style: GoogleFonts.alatsi(
                   fontSize: SizeConfig.defaultSize * 2.2,
                   color: kTextColor,
                 ),
@@ -53,9 +54,9 @@ class Info extends StatelessWidget {
               SizedBox(height: SizeConfig.defaultSize / 2),
               Text(
                 email,
-                style: const TextStyle(
+                style: GoogleFonts.comicNeue(
                   fontWeight: FontWeight.w400,
-                  color: Color(0xFF8492A2),
+                  color: const Color(0xFF8492A2),
                 ),
               ),
             ],

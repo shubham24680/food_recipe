@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_recipe/models/size_config.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'home/components/drawer.dart';
 import 'home/home_screen.dart';
 import 'package:food_recipe/components/navbar.dart';
 
@@ -13,8 +14,8 @@ class Plans extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.red[50],
       appBar: buildAppBar(),
+      drawer: const DrawerScreen(),
       body: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
             padding: EdgeInsets.all(SizeConfig.defaultSize),
@@ -96,7 +97,7 @@ class Cards extends StatelessWidget {
               id == 1
                   ? Column(
                       children: [
-                        selected(true, "Access all Recipes"),
+                        selected(true, "7 Day access"),
                         selected(false, "No Ads"),
                         selected(false, "Meal Plans"),
                         selected(false, "Combo Meals Recipes"),

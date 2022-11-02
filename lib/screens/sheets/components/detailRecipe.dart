@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_recipe/screens/sheets/components/detailRecipeItems.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -11,7 +12,10 @@ class RecipeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[850],
       appBar: AppBar(
-        title: Text(detailRecipeItems.title),
+        title: Text(
+          detailRecipeItems.title,
+          style: GoogleFonts.staatliches(fontSize: 24),
+        ),
         backgroundColor: Colors.black54,
       ),
       body: SafeArea(
@@ -21,11 +25,12 @@ class RecipeScreen extends StatelessWidget {
             child: Column(
               children: [
                 Image.asset(detailRecipeItems.image),
-                heading("Masala Oats Recipe"),
+                heading("${detailRecipeItems.title} Recipe"),
                 const SizedBox(height: 20),
                 Text(
                   detailRecipeItems.intro,
-                  style: GoogleFonts.arimo(fontSize: 16, color: Colors.white70),
+                  style: GoogleFonts.varelaRound(
+                      fontSize: 16, color: Colors.white70),
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 20),
@@ -39,14 +44,14 @@ class RecipeScreen extends StatelessWidget {
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        ingredient(Icons.cookie_sharp, "Prep Time",
+                        ingredient("assets/icons/bowl.svg", "Prep Time",
                             "${detailRecipeItems.prep} mins"),
-                        ingredient(Icons.cookie_sharp, "Cook Time",
+                        ingredient("assets/icons/pot.svg", "Cook Time",
                             "${detailRecipeItems.cook} mins"),
-                        ingredient(Icons.cookie_sharp, "Recipe Services",
+                        ingredient("assets/icons/serve.svg", "Recipe Services",
                             "${detailRecipeItems.services}"),
-                        ingredient(
-                            Icons.cookie_sharp, detailRecipeItems.stage, ""),
+                        ingredient("assets/icons/smile.svg",
+                            detailRecipeItems.stage, ""),
                       ]),
                 ),
                 const SizedBox(height: 20),
@@ -67,16 +72,6 @@ class RecipeScreen extends StatelessWidget {
                           i < detailRecipeItems.ingredients.length;
                           i++)
                         info(detailRecipeItems.ingredients[i]),
-                      //   info("1 Cups Oats"),
-                      // info("1 small Onion (Chopped)"),
-                      // info("1 small Tomato (Chopped)"),
-                      // info("2 tbsp Carrot (Chopped)"),
-                      // info("2 Green Chillies"),
-                      // info("2 tbsp Peas"),
-                      // info("1/2 tsp Garam Masala"),
-                      // info("to taste Red Chilli Powder"),
-                      // info("1 tsp Turmeric Powder"),
-                      // info("to taste Salt"),
                     ],
                   ),
                 ),
@@ -89,42 +84,17 @@ class RecipeScreen extends StatelessWidget {
                       info(detailRecipeItems.info[i]),
                     ],
                   ),
-                // info(
-                //     "To begin with the recipe, take 1 cup of oats and roast them until crispy. Once done, keep aside."),
-                // const Divider(color: Colors.grey),
-                // info(
-                //     "Heat ghee in a pan, add cumin seeds and let them splutter. Then add ginger-garlic paste and saute for a minute."),
-                // const Divider(color: Colors.grey),
-                // info(
-                //     "Then add chopped onion and fry until translucent. Once done, add all the veggies and saute for 5-6 minutes."),
-                // const Divider(color: Colors.grey),
-                // info("Now add turmeric powder and salt. Mix well."),
-                // const Divider(color: Colors.grey),
-                // info(
-                //     "Add garam masala, coriander powder, red chilli powder and mix again."),
-                // const Divider(color: Colors.grey),
-                // info("Pour water as required and then add roasted oats."),
-                // const Divider(color: Colors.grey),
-                // info("Cover for 5-6 minutes."),
                 const SizedBox(height: 50),
                 Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 15,
-                      vertical: 10,
-                    ),
-                    decoration: BoxDecoration(
-                      color: Colors.grey[700],
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Column(
-                      children: [
-                        heading("Key Ingredients:"),
-                        Text(
-                          detailRecipeItems.key,
-                          style: GoogleFonts.arbutus(color: Colors.white),
-                        )
-                      ],
-                    )),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 15,
+                    vertical: 10,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.grey[700],
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
               ],
             ),
           ),
@@ -137,7 +107,7 @@ class RecipeScreen extends StatelessWidget {
 heading(name) {
   return Text(
     name,
-    style: GoogleFonts.alata(
+    style: GoogleFonts.alatsi(
         fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold),
   );
 }
@@ -145,13 +115,17 @@ heading(name) {
 ingredient(icon, title, time) {
   return Column(
     children: [
-      Icon(icon, color: Colors.white),
+      SvgPicture.asset(
+        icon,
+        color: Colors.white,
+        width: 24,
+      ),
       Text(
         title,
-        style:
-            GoogleFonts.abel(color: Colors.white, fontWeight: FontWeight.bold),
+        style: GoogleFonts.darkerGrotesque(
+            color: Colors.white, fontWeight: FontWeight.bold),
       ),
-      Text(time, style: GoogleFonts.abel(color: Colors.white)),
+      Text(time, style: GoogleFonts.darkerGrotesque(color: Colors.white)),
     ],
   );
 }
@@ -171,7 +145,7 @@ info(name) {
         Expanded(
           child: Text(
             name,
-            style: GoogleFonts.alata(color: Colors.white, fontSize: 16),
+            style: GoogleFonts.varelaRound(color: Colors.white, fontSize: 16),
           ),
         ),
       ],

@@ -84,7 +84,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: TextButton(
                       onPressed: () {},
                       child: Text(
-                        "Forgot Password",
+                        "Forgot Password?",
                         style: GoogleFonts.lexend(
                             fontWeight: FontWeight.bold, color: buttonColor),
                       ),

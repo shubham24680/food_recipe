@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_recipe/components/navbar.dart';
 import 'package:food_recipe/models/size_config.dart';
 import 'package:food_recipe/screens/home/components/drawer.dart';
+import 'package:food_recipe/screens/home/home_screen.dart';
 
 import 'components/body.dart';
 
@@ -19,28 +19,4 @@ class Recipe extends StatelessWidget {
       bottomNavigationBar: const MyBottomNavbar(),
     );
   }
-}
-
-buildAppBar() {
-  return AppBar(
-    leading: Builder(
-      builder: ((context) => IconButton(
-            onPressed: () => Scaffold.of(context).openDrawer(),
-            icon: SvgPicture.asset(
-              "assets/icons/menu.svg",
-            ),
-          )),
-    ),
-    centerTitle: true,
-    title: Image.asset("assets/images/logo.png"),
-    actions: <Widget>[
-      IconButton(
-        icon: SvgPicture.asset("assets/icons/search.svg"),
-        onPressed: () {},
-      ),
-      SizedBox(
-        width: SizeConfig.defaultSize * 0.5,
-      )
-    ],
-  );
 }
