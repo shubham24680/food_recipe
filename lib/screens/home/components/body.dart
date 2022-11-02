@@ -31,12 +31,13 @@ class Body extends StatelessWidget {
                 ),
                 itemBuilder: (context, index) => RecipeBundleCard(
                   recipeBundle: recipeBundles[index],
+                  index: index,
                   press: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => RecipeScreen(
-                          detailRecipeItems: detailRecipeItems[0],
+                          detailRecipeItems: detailRecipeItems[index],
                         ),
                       ),
                     );

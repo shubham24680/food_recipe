@@ -10,13 +10,13 @@ class RecipeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[850],
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
           detailRecipeItems.title,
           style: GoogleFonts.staatliches(fontSize: 24),
         ),
-        backgroundColor: Colors.black54,
+        backgroundColor: Colors.deepOrange,
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -30,7 +30,7 @@ class RecipeScreen extends StatelessWidget {
                 Text(
                   detailRecipeItems.intro,
                   style: GoogleFonts.varelaRound(
-                      fontSize: 16, color: Colors.white70),
+                      fontSize: 16, color: Colors.black87),
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 20),
@@ -38,7 +38,7 @@ class RecipeScreen extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                   decoration: BoxDecoration(
-                    color: Colors.grey[700],
+                    color: Colors.deepOrange[50],
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Row(
@@ -59,8 +59,7 @@ class RecipeScreen extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                   decoration: BoxDecoration(
-                    color: Colors.grey[800],
-                    border: Border.all(color: Colors.grey),
+                    color: Colors.deepOrange[50],
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
@@ -84,17 +83,6 @@ class RecipeScreen extends StatelessWidget {
                       info(detailRecipeItems.info[i]),
                     ],
                   ),
-                const SizedBox(height: 50),
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 15,
-                    vertical: 10,
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.grey[700],
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                ),
               ],
             ),
           ),
@@ -108,7 +96,7 @@ heading(name) {
   return Text(
     name,
     style: GoogleFonts.alatsi(
-        fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold),
+        fontSize: 16, color: Colors.deepOrange, fontWeight: FontWeight.bold),
   );
 }
 
@@ -117,15 +105,15 @@ ingredient(icon, title, time) {
     children: [
       SvgPicture.asset(
         icon,
-        color: Colors.white,
+        color: Colors.black87,
         width: 24,
       ),
       Text(
         title,
         style: GoogleFonts.darkerGrotesque(
-            color: Colors.white, fontWeight: FontWeight.bold),
+            color: Colors.deepOrange, fontWeight: FontWeight.bold),
       ),
-      Text(time, style: GoogleFonts.darkerGrotesque(color: Colors.white)),
+      Text(time, style: GoogleFonts.darkerGrotesque(color: Colors.black87)),
     ],
   );
 }
@@ -136,16 +124,16 @@ info(name) {
     child: Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        const Icon(
-          Icons.circle,
-          color: Colors.white,
-          size: 10,
+        SvgPicture.asset(
+          "assets/icons/bullet.svg",
+          color: Colors.black87,
+          width: 16,
         ),
         const SizedBox(width: 20),
         Expanded(
           child: Text(
             name,
-            style: GoogleFonts.varelaRound(color: Colors.white, fontSize: 16),
+            style: GoogleFonts.comfortaa(color: Colors.black87, fontSize: 16),
           ),
         ),
       ],

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_recipe/screens/sheets/components/detailRecipe.dart';
 
 class RecipeBundle {
   final int id, chefs, recipes;

@@ -113,6 +113,61 @@ List<DetailRecipeItems> detailRecipeItems = [
       "Now, add fresh cream to the pan of chicken pieces along with a layer of parboiled rice and mint leaves. Make a final layer of the rest of the fried onions and add saffron milk on top. Cover the pan using a lid and seal it with a dough made of wheat flour. Cook the biryani on low flame till for 40-45 minutes. Once done, serve hot with raita.",
     ],
   ),
+];
+
+List<DetailRecipeItems> specialItems = [
+  DetailRecipeItems(
+    image: "assets/images/egg.jpg",
+    title: "Century Egg",
+    intro:
+        "Century egg is a Chinese cuisine that has a greenish black colour with a delicious cheesy creamy flavour and strong aroma. It takes time to prepare this recipe as the eggs are pickled and preserved for a long time. This authentic Chinese recipe is fun trying. Made using duck egg, lime, dark vinegar and salt, providing this lip-smacking pickle with a refreshing taste, this easy-to-make recipe is sure to be loved by people of all age groups. So go ahead, introduce this amazing mouth-watering dish to your favourite people and relish the flavorful eggs together. You can also serve them on various occasions as a side dish to make many mouths water in one go.",
+    stage: "Easy",
+    prep: 20,
+    cook: 10,
+    services: 4,
+    ingredients: [
+      "4 duck eggs",
+      "1/3 tablespoon salt",
+      "4 tablespoon lime",
+      "1 cup dark vinegar",
+    ],
+    info: [
+      "To prepare a preserved eggs, preserve chicken or duck eggs in a mixture of salt, lime and dark vinegar and wrap it in rice husks for several weeks.",
+      "Wash the preserved egg properly and shell them.",
+      "Cut them into 4 parts and serve it in a ham or sandwhich of your choice.",
+    ],
+  ),
+  DetailRecipeItems(
+    image: "assets/images/rasgulla.jpg",
+    title: "Rasagulla",
+    intro:
+        "If you are looking for a soft and spongy rasgulla recipe, then you are in the right place. Never made rasgulla before? No need to worry, like this super quick and easy rasgulla recipe with step by step photos will be your saviour. Festivals in India are incomplete with rasgulla, rasagola or rosogulla. This soft and spongy rasgulla recipe is one of the most well-known Indian sweet recipes that is prepared with curdled milk. While it may look complicated, making rasgulla is not difficult at all. This traditional Indian dessert recipe just requires homemade cheese, also known as chenna. Traditionally made in Orissa and Bengal, Rasgulla is mostly soft and spongy and is mildly sweet. If we compare it with the other Indian desserts like Malpua, Gulab Jamun, Jalebi or even Balushahi, Rasgulla is the juiciest dessert of them all and also the healthiest! This rasgulla recipe is so popular that in Odisha, it has a dedicated day called Rasagola Dibasa, which is otherwise known as the return of Lord Jagannath and celebrates the history and origin of this dish. If you are also a fan of this soft and spongy rasgulla, here is a simple and easy recipe that you can follow. This original rasgulla recipe gives you a step-by-step peek into how this dish is made. So, what are you waiting for? Try this amazing dessert and enjoy with your loved ones!",
+    stage: "Hard",
+    prep: 15,
+    cook: 60,
+    services: 4,
+    ingredients: [
+      "2 litre milk",
+      "1 1/2 cup sugar",
+      "3 cup water",
+      "1 teaspoon rose water",
+      "3 tablespoon lime juice",
+      "3 cup water",
+      "1 tablespoon all purpose flour",
+      "2 teaspoon powdered green cardamom",
+    ],
+    info: [
+      "Prepare the chhena\nMaking Rasgulla is a child's play if you know the right steps and almost everyone can make this delicious mithai. Take a heavy-bottomed pan and add two litres of full-cream milk to it. When it comes to a boil, reduce the flame and add the lemon juice. Your milk may take a while to curdle and you may require to add a little more lemon juice. Once the milk starts curdling, keep the flame low and allow boiling for 2-3 minutes so that the whey and chhena separates.",
+      "Strain the chhena from whey\nSwitch off the gas. At this point, you can clearly see the green whey and the paneer or chhena which will separate from the water and stand out as small chunks.",
+      "Strain the whey\nAllow the hot liquid to cool for 10-15 minutes. Now take a muslin cloth or a large strainer and strain away from the whey. Wash it in running water to remove the smell of lemon. You can store this whey and use it in soups and stews or curries. It is very nutritious. Many people also like to drink it by adding a little salt or sugar.",
+      "Allow the water to separate\nTie it in the muslin cloth once the chenna cools a bit, squeeze away extra water and allow it to hang for some time. Do not refrigerate or it will make the chhena rubbery. This process may take 3-4 hours.",
+      "Prepare sugar syrup\nHeat water in a pan. When it comes to a boil, add sugar and allow it to simmer on low flame. After 10 minutes, check the syrup by taking a drop of the syrup in a spoon. If it is of one string consistency, your syrup is ready. Add the juice of half a lemon. This will prevent the syrup from granulating later. Also, add gulab jal and cardamom powder. Switch off the gas.",
+      "Knead the chhena\nTake the chhena from the muslin cloth and keep rubbing portions of it from your hand. At this point, you can add the maida. You have to rub it enough so that it becomes completely smooth and starts releasing a little oil. Once your chhena is smooth enough and much lighter in texture, make smooth round balls and keep aside.",
+      "Boil the rasgullas\nMeanwhile heat the sugar syrup again, till it reaches a boiling point. Make sure you make small balls as they will swell up once they absorb the syrup. Add the rasgullas one by one in the syrup ensuring there is enough space in the pan. Boil for 5-7 minutes on low flame. Do not stir.",
+      "Cook covered\nNow cover the pan and allow it to simmer on low flame for 5-7 minutes. When you remove the lid, you will be delighted to see that the rasgullas have swelled up and are looking beautiful! Switch off the flame and allow it to cool.",
+      "Enjoy!\nThe rasgullas can be enjoyed warm or cold. You can also relish them topped with fruits or ice cream. Make sure you try this recipe, rate it and let us know how it turned out to be.",
+    ],
+  ),
   DetailRecipeItems(
     image: "assets/images/oats.jpg",
     title: "Masala Oats",
@@ -142,6 +197,64 @@ List<DetailRecipeItems> detailRecipeItems = [
       "Add garam masala, coriander powder, red chilli powder and mix again.",
       "Pour water as required and then add roasted oats.",
       "Cover for 5-6 minutes."
+    ],
+  ),
+  DetailRecipeItems(
+    image: "assets/images/tikka.jpg",
+    title: "Chicken Tikka",
+    intro:
+        "If you have a party planned at home then should definitely try this easy-to-make chicken recipe, which is absolutely delicious and will be ready in no time! This appetizer recipe is a true delight for all the non-vegetarians as it's succulent and is cooked using broiling method, which makes the dish healthy and nutritious at the same time. Chicken Tikka is an apt dish for occasions like kitty party and game night, and will be ready in just 45-minutes.",
+    stage: "Medium",
+    prep: 15,
+    cook: 30,
+    services: 4,
+    ingredients: [
+      "500 gm chicken thighs",
+      "250 gm chopped into cubes red bell pepper",
+      "1 chopped into cubes onion",
+      "2 tablespoon refined oil",
+      "1/2 cup yoghurt (curd)",
+      "1 teaspoon chili powder",
+      "1 teaspoon coriander powder",
+      "1/2 teaspoon cumin powder",
+      "1/2 teaspoon kasoori methi powder",
+      "1 teaspoon garlic paste",
+      "2 tablespoon lemon juice",
+      "1 teaspoon paprika",
+      "1/4 teaspoon garam masala powder",
+      "1/2 teaspoon caraway seeds",
+      "1 teaspoon ginger paste",
+    ],
+    info: [
+      "To prepare this delicious tikka recipe, prepare the marinade first by mixing together lemon juice, coriander powder, paprika, cumin powder, caraway seeds, aksoori methi powder, ginger-garlic paste, chilli powder and yoghurt in a large bowl. Next, preheat oven at 450 degree Fahrenheit. Next, wash chicken thighs well in running water and pat them dry. Cut them into bite-sized pieces in a large bowl.",
+      "Add chopped chicken, bite-sized onion pieces and chopped bell peppers in the bowl of marinade. Using your hands, mix well and set aside for about 1-2 hours and let them marinate.",
+      "After some time, thread the chicken on to the skewers, followed by onion and bell peppers. Brush oil on all of them.",
+      "Broil these chicken pieces along with onion and bell peppers in oven on high speed for 15 minutes. Flip sides, brush the oil and broil for another 15 minutes or till the chicken meat is browned well.",
+      "Once done, serve the chicken tikka on a bed of lettuce, sliced onions, tomatoes and lemon wedges.",
+    ],
+  ),
+  DetailRecipeItems(
+    image: "assets/images/sandwich.jpg",
+    title: "Sandwich",
+    intro:
+        "Remember the popular Hollywood flick that revolved around the pyramids and The Return of the Mummys from the grave. This Halloween recreate the spooky chills in your kitchen and please the palate of your guests with these simple open sandwiches that taste like Margherita pizza but are super easy to make. All you need is some spicy tomato sauce, cheese slices, oregano chili flakes, black olive slices and butter. So, try these Spooky Bandaged sandwiches. They are not just scary but also delicious.",
+    stage: "Easy",
+    prep: 10,
+    cook: 10,
+    services: 2,
+    ingredients: [
+      "5 bread slices",
+      "3 tablespoon tomato chili sauce",
+      "black olives as required",
+      "chilli flakes as required",
+      "2 tablespoon butter",
+      "6 pieces cheese slices",
+      "oregano as required",
+    ],
+    info: [
+      "Toast the bread\nTake bread slices, toast them by spreadin some butter.",
+      "Cut the cheese slice\nThen spread some tomato chilli ketchup and cut thin strips of cheese slices giving a bandage effect.",
+      "Serve hot\nLayer the open sandwich and make eyes with olive slices. Sprinkle some oregano and chilli flakes and bake for 2-3 minutes to melt the cheese. Serve hot."
     ],
   ),
 ];

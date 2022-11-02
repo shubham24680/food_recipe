@@ -32,7 +32,10 @@ buildAppBar() {
           )),
     ),
     centerTitle: true,
-    title: Image.asset("assets/images/logo.png"),
+    title: Image.asset(
+      "assets/images/logo.jpg",
+      height: SizeConfig.defaultSize * 8,
+    ),
     actions: <Widget>[
       IconButton(
         icon: SvgPicture.asset("assets/icons/search.svg"),

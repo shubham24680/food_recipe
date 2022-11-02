@@ -9,8 +9,12 @@ import 'package:google_fonts/google_fonts.dart';
 class RecipeBundleCard extends StatelessWidget {
   final RecipeBundle recipeBundle;
   final Function press;
+  final int index;
   const RecipeBundleCard(
-      {super.key, required this.recipeBundle, required this.press});
+      {super.key,
+      required this.recipeBundle,
+      required this.press,
+      required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +24,7 @@ class RecipeBundleCard extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) => RecipeScreen(
-              detailRecipeItems: detailRecipeItems[0],
+              detailRecipeItems: specialItems[index],
             ),
           ),
         );

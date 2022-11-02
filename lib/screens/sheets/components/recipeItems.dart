@@ -25,9 +25,4 @@ List<RecipeItems> recipeItems = [
     time: 100,
     image: "assets/images/chicken.jpg",
   ),
-  RecipeItems(
-    title: "Masala Oats",
-    time: 20,
-    image: "assets/images/oats.jpg",
-  ),
 ];
