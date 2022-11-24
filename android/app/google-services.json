@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "159167306793",
+    "project_id": "herbs-and-spices",
+    "storage_bucket": "herbs-and-spices.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159167306793:android:e0641e572440a1807bd038",
+        "android_client_info": {
+          "package_name": "com.foodRecipes.herbs_and_spices"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "159167306793-esmkn5rp5l1k9i2o0s0niiiql93lv4go.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUIZ5lABeKDeuVqcV7RuTJqwTvpzn2SCc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "159167306793-esmkn5rp5l1k9i2o0s0niiiql93lv4go.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -44,11 +44,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       border: Border.all(color: Colors.white),
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20.0),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
                       child: TextField(
                         decoration: InputDecoration(
-                          border: InputBorder.none,
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.white),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
                           hintText: "Email",
                         ),
                       ),
