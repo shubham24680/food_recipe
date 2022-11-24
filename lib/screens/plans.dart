@@ -15,27 +15,29 @@ class Plans extends StatelessWidget {
       backgroundColor: Colors.red[50],
       appBar: buildAppBar(),
       drawer: const DrawerScreen(),
-      body: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.all(SizeConfig.defaultSize),
-            child: const Cards(
-              id: 1,
-              title: "7 Day Meal Plan",
-              subtitle: "Basic",
-              price: "FREE",
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.all(SizeConfig.defaultSize),
+              child: const Cards(
+                id: 1,
+                title: "7 Day Meal Plan",
+                subtitle: "Basic",
+                price: "FREE",
+              ),
             ),
-          ),
-          Padding(
-            padding: EdgeInsets.all(SizeConfig.defaultSize),
-            child: const Cards(
-              id: 2,
-              title: "CookBook",
-              subtitle: "Platinum",
-              price: "\$50",
+            Padding(
+              padding: EdgeInsets.all(SizeConfig.defaultSize),
+              child: const Cards(
+                id: 2,
+                title: "CookBook",
+                subtitle: "Platinum",
+                price: "\$50/month",
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
       bottomNavigationBar: const MyBottomNavbar(),
     );
