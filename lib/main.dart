@@ -4,9 +4,9 @@ import 'package:food_recipe/models/navItems.dart';
 import 'package:food_recipe/screens/Start/demo.dart';
 import 'package:provider/provider.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
