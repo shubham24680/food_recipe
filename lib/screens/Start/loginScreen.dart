@@ -1,7 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:food_recipe/models/constants.dart';
 import 'package:food_recipe/screens/Start/signupScreen.dart';
-import 'package:food_recipe/screens/home/home_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -12,6 +12,22 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+
+  Future signIn() async {
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: _emailController.text.trim(),
+        password: _passwordController.text.trim());
+  }
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,48 +54,41 @@ class _LoginScreenState extends State<LoginScreen> {
                 // Email
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      border: Border.all(color: Colors.white),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Colors.white),
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          // focusedBorder: OutlinedInputBorder(),
-                          hintText: "Email",
-                        ),
+                  child: TextField(
+                    controller: _emailController,
+                    decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(color: Colors.white),
+                        borderRadius: BorderRadius.circular(12),
                       ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(color: buttonColor),
+                        borderRadius: BorderRadius.circular(12.0),
+                      ),
+                      hintText: "Email",
+                      fillColor: Colors.grey[200],
+                      filled: true,
                     ),
                   ),
                 ),
                 const SizedBox(height: 10.0),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      border: Border.all(color: Colors.white),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                      child: TextField(
-                        obscureText: true,
-                        decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Colors.white),
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          hintText: "Password",
-                        ),
+                  child: TextField(
+                    controller: _passwordController,
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(color: Colors.white),
+                        borderRadius: BorderRadius.circular(12),
                       ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(color: buttonColor),
+                        borderRadius: BorderRadius.circular(12.0),
+                      ),
+                      hintText: "Password",
+                      fillColor: Colors.grey[200],
+                      filled: true,
                     ),
                   ),
                 ),
@@ -99,14 +108,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 const SizedBox(height: 15.0),
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const HomeScreen(),
-                        ));
-                  },
+                GestureDetector(
+                  onTap: signIn,
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 25.0),
                     child: Container(

@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_recipe/components/navbar.dart';
 import 'components/body.dart';
 import 'package:food_recipe/models/size_config.dart';
-
 import 'components/drawer.dart';
 
 class HomeScreen extends StatelessWidget {

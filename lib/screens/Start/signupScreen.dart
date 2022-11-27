@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_recipe/models/constants.dart';
-import 'package:food_recipe/models/size_config.dart';
+// import 'package:food_recipe/models/size_config.dart';
 import 'package:food_recipe/screens/Start/loginScreen.dart';
 import 'package:food_recipe/screens/home/home_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -42,62 +42,59 @@ class _SignupScreenState extends State<SignupScreen> {
               // Email
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey[200],
-                    border: Border.all(color: Colors.white),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20.0),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Email",
-                      ),
+                child: TextField(
+                  decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.white),
+                      borderRadius: BorderRadius.circular(12),
                     ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(color: buttonColor),
+                      borderRadius: BorderRadius.circular(12.0),
+                    ),
+                    hintText: "Email",
+                    fillColor: Colors.grey[200],
+                    filled: true,
                   ),
                 ),
               ),
               const SizedBox(height: 10.0),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey[200],
-                    border: Border.all(color: Colors.white),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20.0),
-                    child: TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Password",
-                      ),
+                child: TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.white),
+                      borderRadius: BorderRadius.circular(12),
                     ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(color: buttonColor),
+                      borderRadius: BorderRadius.circular(12.0),
+                    ),
+                    hintText: "Password",
+                    fillColor: Colors.grey[200],
+                    filled: true,
                   ),
                 ),
               ),
               const SizedBox(height: 10.0),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey[200],
-                    border: Border.all(color: Colors.white),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20.0),
-                    child: TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Confirm Password",
-                      ),
+                child: TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.white),
+                      borderRadius: BorderRadius.circular(12),
                     ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(color: buttonColor),
+                      borderRadius: BorderRadius.circular(12.0),
+                    ),
+                    hintText: "Confirm Password",
+                    fillColor: Colors.grey[200],
+                    filled: true,
                   ),
                 ),
               ),

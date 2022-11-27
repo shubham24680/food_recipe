@@ -1,12 +1,17 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:food_recipe/models/navItems.dart';
 import 'package:food_recipe/screens/Start/demo.dart';
+import 'package:food_recipe/screens/home/home_screen.dart';
+import 'firebase_options.dart';
 import 'package:provider/provider.dart';
 
-void main() {
-  // WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp();
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -22,7 +27,17 @@ class MyApp extends StatelessWidget {
           appBarTheme: const AppBarTheme(color: Colors.white, elevation: 0.0),
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: const DemoScreen(),
+        home: Scaffold(
+            body: StreamBuilder(
+          stream: FirebaseAuth.instance.authStateChanges(),
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              return const HomeScreen();
+            } else {
+              return const DemoScreen();
+            }
+          },
+        )),
         debugShowCheckedModeBanner: false,
       ),
     );
