@@ -7,11 +7,11 @@ import 'package:food_recipe/screens/home/home_screen.dart';
 import 'firebase_options.dart';
 import 'package:provider/provider.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp(
+  //   options: DefaultFirebaseOptions.currentPlatform,
+  // );
   runApp(const MyApp());
 }
 
@@ -27,17 +27,18 @@ class MyApp extends StatelessWidget {
           appBarTheme: const AppBarTheme(color: Colors.white, elevation: 0.0),
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: Scaffold(
-            body: StreamBuilder(
-          stream: FirebaseAuth.instance.authStateChanges(),
-          builder: (context, snapshot) {
-            if (snapshot.hasData) {
-              return const HomeScreen();
-            } else {
-              return const DemoScreen();
-            }
-          },
-        )),
+        home: const HomeScreen(),
+        //     Scaffold(
+        //         body: StreamBuilder(
+        //   stream: FirebaseAuth.instance.authStateChanges(),
+        //   builder: (context, snapshot) {
+        //     if (snapshot.hasData) {
+        //       return const HomeScreen();
+        //     } else {
+        //       return const DemoScreen();
+        //     }
+        //   },
+        // )),
         debugShowCheckedModeBanner: false,
       ),
     );
