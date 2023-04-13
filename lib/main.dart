@@ -19,28 +19,29 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => NavItems(),
-      child: MaterialApp(
-        theme: ThemeData(
-          scaffoldBackgroundColor: Colors.white,
-          appBarTheme: const AppBarTheme(color: Colors.white, elevation: 0.0),
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-        ),
-        home: const HomeScreen(),
-        //     Scaffold(
-        //         body: StreamBuilder(
-        //   stream: FirebaseAuth.instance.authStateChanges(),
-        //   builder: (context, snapshot) {
-        //     if (snapshot.hasData) {
-        //       return const HomeScreen();
-        //     } else {
-        //       return const DemoScreen();
-        //     }
-        //   },
-        // )),
-        debugShowCheckedModeBanner: false,
+    // return ChangeNotifierProvider(
+    //   create: (context) => NavItems(),
+    //   child:
+    return MaterialApp(
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(color: Colors.white, elevation: 0.0),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      home: const OptionsScreen(),
+      //     Scaffold(
+      //         body: StreamBuilder(
+      //   stream: FirebaseAuth.instance.authStateChanges(),
+      //   builder: (context, snapshot) {
+      //     if (snapshot.hasData) {
+      //       return const HomeScreen();
+      //     } else {
+      //       return const DemoScreen();
+      //     }
+      //   },
+      // )),
+      debugShowCheckedModeBanner: false,
+      // ),
     );
   }
 }

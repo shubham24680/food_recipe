@@ -18,8 +18,8 @@ class DrawerScreen extends StatelessWidget {
           Image.asset("assets/images/chef.png"),
           InkWell(
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const DemoScreen()));
+              // Navigator.push(context,
+              //     MaterialPageRoute(builder: (context) => const DemoScreen()));
             },
             child: Padding(
               padding: EdgeInsets.symmetric(
